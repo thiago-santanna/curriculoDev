@@ -1,34 +1,48 @@
 import React from 'react'
+import PageHead from '../components/PageHead'
+import Hero from '../components/Hero'
+import Summary from '../components/Summary'
+import Education from '../components/Education'
+import Footer from '../components/Footer'
+import Repos from '../components/Repos'
 import getUser from '../utils/getUser'
 
-const Index = ({repos, user}) =>{
+const Index = (props) => {
     return (
-        <div className="container mx-auto">
-            <h1 className='text-5xl'>Bem-Vindo(a), Eu sou O Thiago Sant'anna</h1>
-            <p>GitHub stats: public repos: {user.public_repos} / Public gists: {user.public_gists} / Followers: {user.followers}</p>
-            <h2 className="font-bold text-3xl">Meus repositorios no GitHub</h2>
-            {repos.map( repo => {
-                return (
-                    <div key={ repo.id} className="rounded mx-8 my-4 p-4 hover:shadow-md bg-gray-200">
-                        <h3 className="font-bold">{repo.full_name}</h3>
-                        <p>{repo.language} / Stars: {repo.stargazers_count}</p>
-                    </div>
-                )
-            })}
+        <div className='container mx-auto bg-network-left lg:bg-network-right'>
+            <PageHead />
+            <Hero />
+            <Summary />
+            <Education />
+            <Repos user={props.user} repos={props.repos} />
+            <Footer currentDate={props.currentDate} />
         </div>
     )
 }
 
-export async function getServerSideProps(context) {
+export async function getStaticProps() {
     const {repos, user} = await getUser('xThiagoSant')
-    
-    return{
-        props:{
+    return {
+        props: {
+            currentDate: new Date().toString(),
+            repos,
+            user
+        },
+        revalidate: 5
+    }
+}
+
+/*
+export async function getServerSideProps(context){
+    const request = await fetch(process.env.API_URL + '/api/getUser')
+    const { repos, user } = await request.json()
+    return {
+        props: {
             currentDate: new Date().toString(),
             repos,
             user
         }
     }
 }
-
+*/
 export default Index

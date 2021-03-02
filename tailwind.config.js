@@ -1,12 +1,13 @@
 module.exports = {
-  future: {
-    // removeDeprecatedGapUtilities: true,
-    // purgeLayersByDefault: true,
-  },
-  purge: [],
   theme: {
-    extend: {},
-  },
-  variants: {},
-  plugins: [],
+    fontFamily: {
+      sans: ['"Titillium Web"']
+    },
+    extend:{
+      colors:{
+        orange: '#F05E7B',
+        roxo: '#5B2C78'
+      }
+    }
+  }
 }

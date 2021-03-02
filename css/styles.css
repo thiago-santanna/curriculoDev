@@ -1,0 +1,16 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.bg-body{
+  background: #F3F4FB;
+}
+
+@responsive {
+  .bg-network-left{
+    background: url(/images/back-network.png) top left no-repeat;
+  }
+  .bg-network-right{
+    background: url(/images/back-network.png) top right no-repeat;
+  }
+}

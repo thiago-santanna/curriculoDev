@@ -1,17 +1,8 @@
 {
-  "name": "curriculo",
+  "name": "thiago-resume",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-    "autoprefixer": "^9.8.6",
-    "next": "^9.5.3",
-    "postcss-import": "^12.0.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "tailwindcss": "^1.8.10"
-  },
-  "devDependencies": {},
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -19,5 +10,20 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^2.2.0",
+    "autoprefixer": "^9.8.0",
+    "next": "^9.5.0",
+    "postcss-import": "^12.0.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-icons": "^3.10.0",
+    "swr": "^0.2.3",
+    "tailwindcss": "^1.4.6"
+  },
+  "devDependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "next-purgecss": "^4.0.0"
+  }
 }
