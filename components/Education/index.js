@@ -18,14 +18,14 @@ const degrees = [
     institution: 'Rocketseat'
   },
   {
-    degree: 'FullStack master',
+    degree: 'FullStack Master',
     subject: 'Desenvolvedor Fullstack JavaScript',
     institution: 'Dev Pleno'
   },
   {
-    degree: 'API com JAVA',
-    subject: 'Java + Spring boot',
-    institution: 'Mentorama'
+    degree: 'Diego Davila',
+    subject: 'WordPress e WooCommerce',
+    institution: 'Udemy'
   },
   {
     degree: 'PHP',
