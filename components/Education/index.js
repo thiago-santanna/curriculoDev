@@ -39,8 +39,8 @@ const degrees = [
   },
   {
     degree: 'Java Programação Orientada a Objetos',
-    subject: 'Fundamentos da POO com JAVA',
-    institution: 'Dev Superior'
+    subject: 'Fundamentos JAVA e Spring',
+    institution: 'ALURA / ALGAWORKS'
   }
 ]
 
