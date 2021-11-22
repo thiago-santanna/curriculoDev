@@ -13,7 +13,7 @@ const degrees = [
     institution: 'Faculdade Estácio de Sá'
   },
   {
-    degree: 'Go Stack',
+    degree: 'Go Stack/Ignite',
     subject: 'Desenvolvedor Fullstack JavaScript',
     institution: 'Rocketseat'
   },
@@ -23,34 +23,34 @@ const degrees = [
     institution: 'Dev Pleno'
   },
   {
-    degree: 'Diego Davila',
-    subject: 'WordPress e WooCommerce',
-    institution: 'Udemy'
+    degree: 'Java Especialista Spring Rest',
+    subject: 'Fundamentos JAVA e Spring',
+    institution: 'AlgaWork'
   },
   {
-    degree: 'PHP',
-    subject: 'Desenvolvedor Fullstack PHP',
-    institution: 'Hugo Cursos'
+    degree: 'Java Programação Orientada a Objetos',
+    subject: 'Fundamentos JAVA e Spring',
+    institution: 'Dev Superior'
+  },
+  {
+    degree: 'Java Programação Orientada a Objetos',
+    subject: 'Fundamentos JAVA e Spring',
+    institution: 'Alura'
   },
   {
     degree: 'Entrando na Nuvem',
     subject: 'Criar soluções no AWS',
     institution: 'Cloud Treinamentos'
-  },
-  {
-    degree: 'Java Programação Orientada a Objetos',
-    subject: 'Fundamentos JAVA e Spring',
-    institution: 'ALURA / ALGAWORKS'
   }
 ]
 
 const Education = () => {
-  return(
+  return (
     <div>
       <h3 className='text-4xl font-bold text-center uppercase mt-10 mb-5 text-roxo'>Educação</h3>
       <div className='mx-6 md:mx-0 md:grid md:grid-cols-2 leading-none bg-white rounded-lg shadow-lg'>
         {degrees.map((degree, i) => (
-          <EducationItem key={'i' + i} degree={degree}  />
+          <EducationItem key={'i' + i} degree={degree} />
         ))}
       </div>
     </div>
